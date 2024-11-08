@@ -17,12 +17,12 @@ a {
     border-radius: 9999px;
     color: white;
     overflow: hidden;
-    transition: transform 1s, background .5s;
+    transition: transform 1s, background 1s;
     background: transparent;
     transform: scale(100%); 
 }
 a:hover {
-    background: #0f0f0f;
+    background: #191b2d;
     transform: scale(85%);
 }
 a::before {
@@ -30,7 +30,7 @@ a::before {
     position: absolute;
     content: "";
     padding: 6rem;
-    background: white;
+    background: #0000ff;
     border-radius: 9999px;
     transition: transform 1s, opacity 1s;
     transform: scale(0);

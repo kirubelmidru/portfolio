@@ -22,7 +22,8 @@ a {
     transform: scale(100%); 
 }
 a:hover {
-    background: #191b2d;
+    background: #000099;
+    opacity: 80%;
     transform: scale(85%);
 }
 a::before {
@@ -32,12 +33,12 @@ a::before {
     padding: 6rem;
     background: #0000ff;
     border-radius: 9999px;
-    transition: transform 1s, opacity 1s;
+    transition: transform 1.5s, opacity 1s;
     transform: scale(0);
-    opacity: 0;
+    opacity: 50%;
 }
 a:hover::before {
     transform: scale(1);
-    opacity: 10%;
+    opacity: 0%;
 }
 </style>

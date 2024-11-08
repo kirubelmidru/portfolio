@@ -21,6 +21,7 @@ a {
     display: flex;
     align-items: center;
     background: var(--accent-color);
+    color: var(--secondary-color);
     border-bottom-left-radius: 9999px;
     border-top-left-radius: 9999px;
     transition: all .5s;

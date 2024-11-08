@@ -1,0 +1,31 @@
+:root {
+    --accent-color: #00ed64;
+    --secondary-color:#061621;
+    --background-color: #ffffff;
+    --line-color: #eeeeee;
+    --active-line-color: #f04816;
+    --padding-mobile: 1rem;
+    --padding-desktop: 2rem;
+    --bg-pattern: url("../bg-pattern.png");
+}
+
+@font-face {
+    font-family: "HeyWow";
+    src: url('/fonts/HeyWow-Medium.woff') format('woff');
+    font-display: swap;
+}
+
+* {
+    border: 0px;
+    padding: 0px;
+    margin: 0px;
+    background: transparent;
+    font-family: "HeyWow", sans-serif;
+    text-decoration: none;
+    box-sizing: border-box;
+    color: var(--secondary-color);
+}
+
+body {
+    background: #090b1d;
+}

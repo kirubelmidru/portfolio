@@ -1,0 +1,43 @@
+<script>
+export let text;
+export let link;
+</script>
+
+<a href={link}>
+    {text}
+</a>
+
+<style>
+a {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 2rem;
+    border-radius: 9999px;
+    color: white;
+    overflow: hidden;
+    transition: transform 1s, background .5s;
+    background: transparent;
+    transform: scale(100%); 
+}
+a:hover {
+    background: #0f0f0f;
+    transform: scale(85%);
+}
+a::before {
+    display: block;
+    position: absolute;
+    content: "";
+    padding: 6rem;
+    background: white;
+    border-radius: 9999px;
+    transition: transform 1s, opacity 1s;
+    transform: scale(0);
+    opacity: 0;
+}
+a:hover::before {
+    transform: scale(1);
+    opacity: 10%;
+}
+</style>

@@ -1,43 +1,49 @@
 <script>
-
+export let title;
+export let date;
 </script>
 
 <a>
-    <div class="post-image">
-	<div class="tags">
-	    <p>Feb 7, 2022</p>
-	</div>
+    <div class="tags">
+	<p>7 feb 2025</p>
+	<p>Blog</p>
     </div>
-    <h3>Exploring the World of Erlang</h3>
+    <img class="post-image" src="../first.png"/>
+    <h3>Exploring Functional Programming: My Experience With Erlang</h3>
 </a>
 
 <style>
 a {
     display: flex;
     flex-direction: column;
+    border-radius: 1rem;
+    overflow: hidden;
 }
 h3 {
-    background: #171717;
-    border-bottom-left-radius: 1rem;
-    border-bottom-right-radius: 1rem;
+    background: #080808;
     padding: 1rem;
+    z-index: 1;
 }
 .post-image {
     background-image: url("../first.png");
     height: 40vh;
-    border-top-left-radius: 1rem;
-    border-top-right-radius: 1rem;
+    z-index: 0;
+    transition: transform 1s, filter 1s;
+}
+a:hover .post-image {
+    filter: grayscale(100%);
+    transform: scale(1.2);
 }
 .tags {
-    height: 100%;
-    padding: .5rem;
+    position: absolute;
+    padding: 1rem;
     display: flex;
     flex-direction: row;
-    align-items: end;
-    gap: 2px;
+    gap: .5rem;
+    z-index: 1;
 }
 .tags p {
-    padding: .5rem 1rem;
+    padding: 6px 12px;
     background: #171717;
     border-radius: 9999px;
     box-shadow: 0 0 0 1px #4e4e4e;

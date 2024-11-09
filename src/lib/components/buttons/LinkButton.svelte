@@ -13,17 +13,14 @@ a {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 1rem 2rem;
+    padding: 12px 24px;
     border-radius: 9999px;
     color: white;
     overflow: hidden;
-    transition: transform 1s, background 1s;
-    background: transparent;
+    transition: transform 1s;
     transform: scale(100%); 
 }
 a:hover {
-    background: #000099;
-    opacity: 80%;
     transform: scale(85%);
 }
 a::before {
@@ -33,12 +30,12 @@ a::before {
     padding: 6rem;
     background: #0000ff;
     border-radius: 9999px;
-    transition: transform 1.5s, opacity 1s;
+    transition: transform 1s, opacity 1s;
     transform: scale(0);
-    opacity: 50%;
+    opacity: 100%;
 }
 a:hover::before {
     transform: scale(1);
-    opacity: 0%;
+    opacity: 20%;
 }
 </style>

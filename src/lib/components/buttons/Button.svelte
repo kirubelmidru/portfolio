@@ -17,7 +17,7 @@ a {
     transition: all .5s;
 }
 .btn-left {
-    padding: 1rem;
+    padding: .5rem 1rem;
     display: flex;
     align-items: center;
     background: var(--accent-color);
@@ -33,7 +33,7 @@ a:hover .btn-left {
     transform: translateX(-10%);
 }
 .btn-right {
-    padding: 1rem;
+    padding: .5rem;
     display: flex;
     background: var(--accent-color);
     border-bottom-right-radius: 9999px;

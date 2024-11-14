@@ -3,7 +3,7 @@ import BlogPost from "$lib/components/articles/BlogPost.svelte";
 </script>
 
 <div class="blog-wrapper">
-    <h2>Blog</h2>
+    <h2>My Personal Blog</h2>
     <div class="posts">
 	<BlogPost/>
 	<BlogPost/>
@@ -13,19 +13,34 @@ import BlogPost from "$lib/components/articles/BlogPost.svelte";
 
 <style>
 .blog-wrapper {
-    padding: 4rem;
-    display: flex;
-    flex-direction: column;
-    gap: 8rem;
+    padding: 2rem;
 }
 h2 {
-    font-size: 64px;
+    padding: 8rem;
+    font-size: 52px;
     text-align: center;
 }
 .posts {
-    padding: 0 8rem;
+    max-width: 1500px;
+    margin-left: auto;
+    margin-right: auto;
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 2rem;
+    gap: 1rem;
+}
+@media only screen and (max-width: 1500px) {
+    .posts {
+	max-width: 960px;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+@media only screen and (max-width: 960px) {
+    .blog-wrapper {
+	padding: 0 1rem;
+    }
+    .posts {
+	max-width: 540px;
+	grid-template-columns: repeat(1, minmax(0, 1fr));
+    }
 }
 </style>

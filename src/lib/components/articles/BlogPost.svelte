@@ -25,13 +25,13 @@ h3 {
     z-index: 1;
 }
 .post-image {
-    background-image: url("../first.png");
-    height: 40vh;
+    height: 18rem;
     z-index: 0;
     transition: transform 1s, filter 1s;
+    filter: grayscale(100%);
 }
 a:hover .post-image {
-    filter: grayscale(100%);
+    filter: grayscale(0%);
     transform: scale(1.2);
 }
 .tags {
@@ -45,8 +45,7 @@ a:hover .post-image {
 .tags p {
     padding: 6px 12px;
     background: #171717;
-    border-radius: 9999px;
-    box-shadow: 0 0 0 1px #4e4e4e;
+    border-radius: 4px;
     font-size: 10px;
     text-transform: uppercase;
 }

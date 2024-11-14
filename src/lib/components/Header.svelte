@@ -2,6 +2,7 @@
 import Logo from "$lib/components/banners/Logo.svelte";
 import LinkButton from "$lib/components/buttons/LinkButton.svelte";
 import Button from "$lib/components/buttons/Button.svelte";
+import Hamburger from "$lib/components/buttons/Hamburger.svelte";
 
 let tabs = [
     {text: "Home", link: "/"},
@@ -12,21 +13,21 @@ let tabs = [
 ];
 </script>
 
-<nav>
-    <Logo/>
-    <div class="nav-menu">
-	{#each tabs as tab}
-	    <LinkButton text={tab.text} link={tab.link}/>
-	{/each}
+<header>
+    <div class="hamburger-button">
+	<Hamburger/>
     </div>
-    <Button/>
-</nav>
+    <Logo/>
+    <div class="contact-button">
+	<Button/>
+    </div>
+</header>
 
 <style>
-nav {
+header {
     position: sticky;
     top: 0;
-    padding: 1rem var(--padding-desktop);
+    padding: .5rem var(--padding-desktop);
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -34,13 +35,14 @@ nav {
     backdrop-filter: blur(5px);
     z-index: 999;
 }
-.nav-menu {
-    padding: 4px 2px;
-    background:#06081a;
-    display: flex;
-    flex-direction: row;
-    text-transform: uppercase;
-    border-radius: 9999px;
-    box-shadow: 0 0 0 1px #292f65;
+.hamburger-button {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+@media only screen and (max-width: 960px) {
+    .contact-button {
+	visibility: hidden;
+    }
 }
 </style>

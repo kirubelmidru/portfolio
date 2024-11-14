@@ -1,7 +1,7 @@
 <button>
-    <span/>
-    <span/>
-    <span/>
+    <span></span>
+    <span></span>
+    <span></span>
 </button>
 
 <style>

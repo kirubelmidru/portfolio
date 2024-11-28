@@ -1,25 +1,42 @@
 <script>
-import Button from "$lib/components/buttons/Button.svelte";
+import LinkButton from "$lib/components/buttons/LinkButton.svelte";
+let tabs = [
+    {text: "About", link: "/about"},
+    {text: "Services", link: "/services"},
+    {text: "Works", link: "/works"},
+    {text: "Blog", link: "/blog"},
+];
 </script>
 
 <footer>
-    <div class="contact-wrapper">
-	<p style="font-size: 48px; color: white;"> Impressed By What You See?</p>
-	<Button/>
+    <div class="footer-wrapper">
+	<div class="">
+
+	</div>
+	<div class="roadmap">
+	    <h2>RoadMap</h2>
+	    {#each tabs as tab}
+		<LinkButton text={tab.text} link={tab.link}/>
+	    {/each}
+	</div>
     </div>
 </footer>
 
 <style>
 footer {
-    background: var(--secondary-color);
-}
-.contact-wrapper {
-    text-align: center;
-    padding: 2rem;
-    background: #080808;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: space-between;
     align-items: center;
-    gap: 2rem;
+    background: #0f6efc;
+}
+.footer-wrapper {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: var(--padding);
+}
+.footer-wrapper h2 {
+    font-size: 48px;
+    text-transform: uppercase;
 }
 </style>
